@@ -10,7 +10,8 @@ Set Source to Deploy from a branch.
 Choose the main branch and the /root folder, then save.
 GitHub will publish the site at:
 
-https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
+kadevohn.github.io 
+
 Add a new post
 Copy one of the files in _posts/.
 Rename it with this format: YYYY-MM-DD-post-title.md.
