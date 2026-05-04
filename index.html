@@ -1,0 +1,54 @@
+---
+layout: default
+title: Field Notes
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">kade.the blog for readers</p>
+    <h1 id="hero-title">Deliberate words, sent forth in their appointed hour. </h1>
+    <p>
+     A humble dwelling for the written word—
+for tidings and for thoughts—
+which a man may set forth continually
+by the hand of GitHub Pages.
+    </p>
+    <a class="button" href="#posts">Read latest</a>
+  </div>
+</section>
+
+<section class="intro" id="about" aria-labelledby="about-title">
+  <div>
+    <p class="eyebrow">about.</p>
+    <h2 id="about-title">.here lies a place set apart for thoughts of use among the living//the channel by which my voice goeth forth unto the world//.god willing</h2>
+  </div>
+  <p>
+     i will make use of these pages as a vessel, with which i may fill with those thoughts that i found to be pleasing, 
+and also the forms of that which cannot be known, yet gladden the heart of many. To be certain, it shall be known
+that upon these pages will contain all striking compositions and curiosities of art, architecture, the histories, among others.
+all content has been made by kade vohn kilchrist.
+contact--> kadevohn@gmail.com
+  </p>
+</section>
+
+<section class="posts-section" id="posts" aria-labelledby="posts-title">
+  <div class="section-heading">
+    <p class="eyebrow">Latest</p>
+    <h2 id="posts-title">Posts</h2>
+  </div>
+
+  <div class="posts-grid">
+    {% for post in site.posts %}
+      <article class="post-card">
+        <div>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </time>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+        </div>
+        <a href="{{ post.url | relative_url }}">Read post</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
